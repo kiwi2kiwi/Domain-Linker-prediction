@@ -1,0 +1,4 @@
+py Protein_reader.py -q cath-domain-boundaries-seqreschopping.txt -c [linker cutoff]
+py sequence_download.py -f [pdb_fasta file] -o [where the file should be saved the mmseq2]
+/mnt/home/mheinzinger/deepppi1tb/mmseqs2/mmseqs/bin/mmseqs easy-cluster clean_fastas2.fasta domain_PIDE20 tmp --min-seq-id [0.1 - 0.2 in 0.05 schritten]
+py analysis_of_mmseq2.py -i [file from mmseq2] -m [the min-seq-id parameter used in mmseq2] -c [cutoff used in the protein reader]
